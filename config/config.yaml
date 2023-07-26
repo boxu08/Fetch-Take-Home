@@ -1,0 +1,2 @@
+# only the offers with matching score higher than min_score will be displayed
+min_score: 0.3
