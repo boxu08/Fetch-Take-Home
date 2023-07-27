@@ -2,8 +2,8 @@
 This repository contains my submission to Fetch's Data Science Take Home challenge.  
 
 # Instructions for Running (tested on python 3.8 and 3.11)
-1. Install Python packages pandas, nltk, tabulate, pyyaml if you have not done so yet.
-2. Go to src directory.
+1. pip install -r requirements.txt
+2. cd src
 3. python main.py
 4. Follow the displayed instructions to use the search tool.
 
