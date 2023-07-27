@@ -56,6 +56,7 @@ if __name__ == '__main__':
 
     while True:
         # Display prompts
+        print('\n\n')
         print("Please choose any of the following queries by typing in the number before the query:")
         print("1. Search offers relevant to a given category.")
         print("2. Search offers relevant to a given brand.")
@@ -72,16 +73,13 @@ if __name__ == '__main__':
             input_category = input("Now input the category you want to search for (e.g., Coffee): ")
             result = category_search(input_category, expanded_category_df, offer_category_df, min_score)
             print(tabulate(result, headers='keys', tablefmt='psql', showindex=False))
-            print("\n\n")
         elif query_choice == 2:
             input_brand = input("Now input the brand you want to search for (e.g., SAMS): ")
             result = brand_search(input_brand, offer_retailer_df, min_score)
             print(tabulate(result, headers='keys', tablefmt='psql', showindex=False))
-            print("\n\n")
         elif query_choice == 3:
             input_brand = input("Now input the retailer you want to search for (e.g., AMAZON): ")
             result = retailer_search(input_brand, offer_retailer_df, min_score)
             print(tabulate(result, headers='keys', tablefmt='psql', showindex=False))
-            print("\n\n")
         elif query_choice == 0:
             quit()
