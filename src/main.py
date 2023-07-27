@@ -9,6 +9,7 @@ This script provides a simple CLI for a user to search offers based an input cat
 from tabulate import tabulate
 from search_offers import *
 import yaml
+import nltk
 
 
 def get_min_score_from_yaml(file_path: str):
@@ -43,6 +44,11 @@ if __name__ == '__main__':
     categories_df = pd.read_csv('../data/categories.csv')
     offer_retailer_df = pd.read_csv('../data/offer_retailer.csv')
     brand_category_df = pd.read_csv('../data/brand_category.csv')
+
+    # download punkt for tokenization
+    nltk.download('punkt')
+    # download stopwords for stopwords removing
+    nltk.download('stopwords')
 
     # prepare tables that will be used for category searching
     expanded_category_df = prepare_expanded_category_table(categories_df)
